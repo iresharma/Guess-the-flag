@@ -11,7 +11,14 @@ import SwiftUI
 struct Guess_the_flagApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                LinearGradient(gradient: Gradient(
+                                colors: [.blue, Color.blue.opacity(0.7)]),
+                               startPoint: .top,
+                               endPoint: .bottom)
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                ContentView()
+            }
         }
     }
 }
